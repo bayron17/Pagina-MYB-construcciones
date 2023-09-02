@@ -1,0 +1,192 @@
+body {
+   
+    margin: 0;
+    padding: 0;
+}
+
+.card-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: initial;
+    height: 100vh;
+    padding-top: 30px;
+    padding-left: 20px;
+        
+}
+
+.card {
+    width: 250px;
+    height: 300px;
+    margin: 0 20px; /* Espacio entre las cards */
+    perspective: 1000px; /* Establece la perspectiva para la animación 3D */
+    border-radius: 10px; /* redondeamos bordes del container */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* Preserva la estructura 3D de los elementos internos */
+    transition: transform 2s; /* Agrega una transición suave para la animación */
+    border-radius: 15px;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Gira el card 180 grados en el eje Y al pasar el cursor por encima */
+    box-shadow: 0 0 10px #515151; /* box-shadow genera una sombra en el hover del contenedor items en cada item */
+    scale: 1.05;
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Oculta la parte trasera del card */
+    border-radius: 15px; 
+}
+
+.card-front {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card-back {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: rotateY(180deg); /* Inicialmente muestra la parte trasera del card */
+    flex-direction: column;
+}
+
+#boton-back {
+    margin-bottom:10px ;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: black;
+    margin-bottom: 15px;
+}
+
+#boton-back a{
+text-decoration: none;
+color: white;
+
+}
+#boton-back:hover{
+    box-shadow: 5px 5px rgb(45, 45, 45);
+    scale: 1.05;
+}
+
+
+/* style card */
+
+.card-inner .card-back .item{
+    height: 15rem;
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #666;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 3s; /*transition permite que los cambio no se generen instantaneamente si no que se demoren lo especificado en la transition */
+ }
+ 
+ /* .card-inner .item:hover{
+     box-shadow: 0 0 10px #666; box-shadow genera una sombra en el hover del contenedor items en cada item */
+     /* scale: 1.05;
+ }
+  */
+ .card .item .img-item{
+     width: 100%;
+ }
+ 
+ #img-item1{
+     padding-top: 1rem;
+     height: 100%;
+ }
+ 
+ .card .item .titulo-item{
+     display: block;
+     font-weight: bold;  /* La propiedad font-weight especifica el peso o grueso de la letra. */
+     text-align: center;
+     text-transform: uppercase;
+     padding-top: 35px;
+ }
+ 
+
+ #titulo-cardEs{
+    padding-top: 65px;
+ }
+ /* .card .item .precio-item{
+     display: block;   /* display bolck indica que el elemento utilizara todo el espacio disponible 
+     text-align: center;
+     font-weight: bold;
+     font-size: 22px;
+ } */
+ /* #precio-item1{
+     padding-top: 18%    ;
+ } */
+ 
+ .card .item .boton-item{
+ 
+     display: block;
+     margin: 22% auto;
+     border: none;
+     background: black;
+     color: #fff;
+     padding: 5px 15px;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+ 
+ .card .item .boton-item .desc-boton-item{
+     text-decoration: none;
+     color: #fff;
+ 
+ 
+ }
+ 
+ #boton-item1{
+     margin: 38% auto;
+    
+ }
+
+ 
+ /* *************************** REPONSIVIDAD ************************** */
+ @media screen and (max-width:450px){
+
+    .container-header{
+        opacity: 0;
+    }
+
+    .card-container{
+        display: block;
+    }
+
+    .card{
+        display: block;
+    }
+
+    .card-front,
+    .card-back {
+        display: block;
+    }
+
+    .card-inner{
+        display: block;
+    }
+
+    .item{
+        display: block;
+    }
+
+    .container-footer{
+        display: block;
+        opacity: 50%;
+    }
+
+}

@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@300;400;600;700&family=Urbanist:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,700&family=Poppins:wght@300;400;600;700&family=Urbanist:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+/* ***********  BODY  *********** */
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ******************     INICIO CONTAINER      *********************** */
+.inicio-Container{
+    width: 100%;
+    height: 82vh;
+    background-size:contain ;
+    background-image: linear-gradient(180deg,#0000008c 0%, #0000008c 100%),url(../img/wallpaper-precio-cancha-cotizacion.jpg); 
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 50% 100%, 0 87%);
+    color: #fff;
+    text-align: center;
+}
+
+.inicio-Container img{
+    height: 100%;
+}
+
+.inicio-Container p ,h1{
+    padding-top: 8%;
+    font-family: 'Playfair Display', serif;
+}
+
+ .boton-cotizar {
+    color: #fff;
+    border-radius: 10px;
+    background: transparent !important;
+    margin-top: 5rem;
+    margin-left: 2%;
+    padding: 1%;
+    
+}
+
+.boton-cotizar :hover{
+    box-shadow: 0 0 60px #666; /* box-shadow genera una sombra en el hover del contenedor items en cada item */
+    scale: 1.05;
+}
+
+.boton-cotizar .cta{
+    color: #fff;
+    text-decoration: none;
+}
+/* ****************** PRODUCTOS *********************** */
+
+.contenedor{
+    max-width: 1200px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* oculto lo que queda fuera del contenedor */
+    contain: paint;
+    margin-top: 50px;
+    
+}
+
+.contenedor .contenedor-items{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    width: 100%;
+    transition: .3s;
+}
+
+.contenedor .contenedor-items .item{
+   height: 18rem;
+   width: 100%;
+   max-width: 200px;
+   padding: 10px;
+   margin: auto;
+   border: 1px solid #666;
+   border-radius: 10px;
+   padding: 20px;
+   transition: .3s; /*transition permite que los cambio no se generen instantaneamente si no que se demoren lo especificado en la transition */
+
+}
+
+.contenedor-items .item:hover{
+    box-shadow: 0 0 10px #666; /* box-shadow genera una sombra en el hover del contenedor items en cada item */
+    scale: 1.05;
+}
+
+.contenedor-items .item .img-item{
+    width: 100%;
+}
+
+#img-item1{
+    padding-top: 1rem;
+}
+
+.contenedor-items .item .titulo-item{
+    display: block;
+    font-weight: bold;  /* La propiedad font-weight especifica el peso o grueso de la letra. */
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contenedor-items .item .precio-item{
+    display: block;   /* display bolck indica que el elemento utilizara todo el espacio disponible */
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+#precio-item1{
+    padding-top: 18%    ;
+}
+
+.contenedor-items .item .boton-item{
+
+    display: block;
+    margin: 20% auto;
+    border: none;
+    background: black;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenedor-items .item .boton-item .desc-boton-item{
+    text-decoration: none;
+    color: #fff;
+
+
+}
+
+#boton-item1{
+    margin: 20% auto;
+   
+}
+
+/* ****************** FIN ESTILO PARA PRODUCTOS *********************** */
+
+/* ****************** ESTILO PARA descripcion canchas *********************** */
+.Container-descripcio-canchas{
+    width: 100%;
+    height: 90vh;
+    background-size:contain;
+    background-image: linear-gradient(180deg,#0000008c 0%, #0000008c 100%),url(../img/bienvenida-pagina.avif); 
+    clip-path: polygon(100% 100%, 50% 100%, 0 100%, 0 0, 49% 12%, 100% 0);
+    color: #fff;
+}
+
+
+
+.Container-descripcio-canchas h1{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    padding-top: 13%;
+}
+
+.imgDesc{
+   float: left;
+}
+
+/* ******************  containers oficina / Baños ***************************** */
+.containers-baño-oficina{
+    /* background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; */
+    background: linear-gradient(to top, #ecebeb 2%,rgb(0, 0, 0)100%),radial-gradient(at top center, rgba(42, 42, 42, 0.4) 0%, rgba(89, 88, 88, 0.4) 120%) #e2e2e2;
+    background-blend-mode: multiply,multiply;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 91%);
+    height: 55rem;
+}
+.titulo-containers{
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    animation-name: aparicion;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+
+}
+
+.img-container-baños-oficina{
+    margin: 20px;
+    height: 19rem;
+    width: 20rem;
+    animation-name: aparicion;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    padding-bottom: 4%;
+    border-radius: 10px;
+
+}
+
+.col-img-containers :hover{
+    box-shadow: rgb(198, 198, 198);
+    scale: 1.05;
+    transition: .3s;
+    border-radius: 20px;
+
+}
+
+.img-calidad-cont {
+    display: block;
+    padding-top: 30px;
+}
+
+.contenedor-video-containers-baño video{
+    margin-top: 3%;
+    width: 100%;
+    height: 18rem;
+    border-radius: 15px;
+}
+
+
+/* ****************** ESTILOS DE DESCRIPCION DE CONTAINER EN ARRIENDO O VENTA */
+
+.con-desc-con1{
+    padding-top: 4%;
+    animation-name: aparicion;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    background: linear-gradient(to bottom, #d6d4d4 2%,rgb(29, 29, 29)100%),radial-gradient(at top center, rgba(166, 164, 164, 0.4) 0%, rgba(220, 219, 219, 0.4) 120%) #c8c6c6;
+    clip-path: polygon(2% 0, 100% 0%, 100% 100%, 2% 100%, 0% 50%);
+    border-radius: 25px;
+
+}
+
+.con-desc-con2{
+    padding-top: 4%;
+    animation-name: aparicion;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    background: linear-gradient(to bottom, #d6d4d4 2%,rgb(29, 29, 29)100%),radial-gradient(at top center, rgba(166, 164, 164, 0.4) 0%, rgba(220, 219, 219, 0.4) 120%) #c8c6c6;
+    clip-path: polygon(0% 0%, 98% 0, 100% 50%, 98% 100%, 0% 100%);
+    border-radius: 25px;
+}
+
+
+.col-desc-cont{
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+/* ****************** ESTILO PARA PROYECTOS REALIZADOS *********************** */
+.proyectosRealizados{
+    /* margin: 5%; */
+    background-color: #000;
+    max-height: 80%;
+}
+
+.proyectosRealizados h2{
+    padding-top: 5%;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    animation-name: aparicion;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.PRimg{
+   
+    width: 100%;
+    height: 100%;
+    animation-name: aparicion;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.video-proyecto-realizados{
+  max-height: 40rem;
+  animation-name: aparicion;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.carousel-item{
+    height: 40rem;
+}
+
+/* #PRimg2{
+    max-width: 400px; 
+    max-height: auto;
+}
+#PRimg2{
+   max-width: 300px; 
+   max-height: auto;
+
+}
+
+#PRimg3{
+    padding-bottom: 40%;
+     max-width: 500px; 
+    max-height: auto; 
+
+ } */
+
+ .col-titulo{
+    color: #fff;
+    margin-bottom: 2%;
+    animation-name: aparicion;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+ }
+
+ /* *************************** REPONSIVIDAD ************************** */
+ @media screen and (max-width:850px){
+
+    .container-header{
+        opacity: 0;
+    }
+
+    .inicio-Container{
+        display: block;
+    }
+
+    .contenedor-items{
+        display: block;
+    }
+
+    .Container-descripcio-canchas{
+        display: block;
+    }
+
+    .proyectosRealizados{
+        display: block;
+    }
+
+}
+
+@media screen and (min-width:404px){
+
+
+}
+
+
+/* **********ANIMACION TRANSFORMACION */
+@keyframes aparicion{
+    0%{
+        opacity: 0;
+        transform: scale(2) translateY(75px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}

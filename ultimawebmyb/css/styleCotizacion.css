@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@300;400;600;700&family=Urbanist:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,700&family=Poppins:wght@300;400;600;700&family=Urbanist:wght@300&display=swap');
+
+
+/* BODY */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* style forulario cotizacion */
+.contenedorformulario{
+background-image: url(../img/walpaper-formulario.jpg);
+background-size: contain;
+height: 100vh;
+}
+
+.contenedorformulario h2{
+    font-family: 'Playfair Display', serif;
+}
+
+.titulo-formulario{
+    padding-top: 15px;
+}
+
+.formulario{
+    padding-top: 8%;
+    text-align: end;
+    margin-right: 5%;
+}
+
+.formulario input {
+    margin-top: 1%;
+    background: rgb(249, 211, 115);
+    border-radius: 5px ;
+    border-color: rgb(249, 211, 115);
+    font-size: 15px;
+    width: 25rem;
+    height: 2rem;
+    color: #000;
+}
+
+.formulario textarea{
+    margin-top: 1%;
+    background: rgb(249, 211, 115);
+    border-radius: 5px ;
+    border-color: rgb(249, 211, 115);
+    font-size: 15px;
+    width: 25rem;
+    color: #000;
+}
+
+.formulario  ::placeholder {
+    color: #000;  
+}
+
+.formulario col{
+    border: solid red;
+}
+/* ajustando placeholder de los input */
+#nombres {
+    padding-left: 120px;
+}
+
+#apellidos{
+    padding-left: 120px;
+}
+
+#numero{
+    padding-left: 120px;
+}
+
+#correo{
+    padding-left: 120px;
+}
+
+#comentario{
+    padding-left: 120px;
+    padding-top:40px ;
+}
