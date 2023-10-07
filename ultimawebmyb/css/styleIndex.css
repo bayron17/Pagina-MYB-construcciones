@@ -11,7 +11,76 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+/* ************  HEADER *************** */
 
+.container-header{
+    height: 100%;
+    display: block;
+    background-size:contain ;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.logos-conacto img{
+   width: 50PX;
+   margin-top: 1%;
+}
+
+#lineContactanos{
+    margin-right: 300px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    animation: movContacto 5s linear infinite;
+}
+
+
+/* ******************           NAVBAR          *********************** */
+
+nav{
+    background-color: #000;
+}
+
+.nav-item a{
+    color: #fff;
+}
+
+.nav-item a:hover {
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+.navbar-logo{
+    padding-left: 22%; 
+}
+
+.navbar-logo :hover{
+    box-shadow: 0 0 30px #666; /* box-shadow genera una sombra en el hover del contenedor items en cada item */
+    scale: 1.05;
+}
+
+.dropdown-menu{
+    background-color: #000;
+}
+#hr-menu-canchas{
+    color: #fff;
+}
+
+/* ************** STILOS FOOTER  */
+.container-footer{
+    
+}
+.contenedor-desc-footer{
+    background-image: linear-gradient(to top, #434343 0%, black 70%);
+    color: #fff;
+}
+.col-iconos img{
+display: block;
+margin-left: 1%;
+float: left;
+}
+
+/* fin style footer */
 
 /* ******************     INICIO CONTAINER      *********************** */
 .inicio-Container{
@@ -33,14 +102,13 @@ body{
     font-family: 'Playfair Display', serif;
 }
 
- .boton-cotizar {
+.boton-cotizar {
     color: #fff;
     border-radius: 10px;
     background: transparent !important;
     margin-top: 5rem;
     margin-left: 2%;
     padding: 1%;
-    
 }
 
 .boton-cotizar :hover{
@@ -62,7 +130,6 @@ body{
     /* oculto lo que queda fuera del contenedor */
     contain: paint;
     margin-top: 50px;
-    
 }
 
 .contenedor .contenedor-items{
@@ -85,7 +152,6 @@ body{
    border-radius: 10px;
    padding: 20px;
    transition: .3s; /*transition permite que los cambio no se generen instantaneamente si no que se demoren lo especificado en la transition */
-
 }
 
 .contenedor-items .item:hover{
@@ -291,23 +357,6 @@ body{
     height: 40rem;
 }
 
-/* #PRimg2{
-    max-width: 400px; 
-    max-height: auto;
-}
-#PRimg2{
-   max-width: 300px; 
-   max-height: auto;
-
-}
-
-#PRimg3{
-    padding-bottom: 40%;
-     max-width: 500px; 
-    max-height: auto; 
-
- } */
-
  .col-titulo{
     color: #fff;
     margin-bottom: 2%;
@@ -318,28 +367,30 @@ body{
  }
 
  /* *************************** REPONSIVIDAD ************************** */
- @media screen and (max-width:850px){
+ @media (max-width:768px){
 
     .container-header{
         opacity: 0;
     }
 
-    .inicio-Container{
-        display: block;
-    }
+    section{   
 
-    .contenedor-items{
-        display: block;
+        .inicio-Container{
+            display: block;
+        }
+    
+        .contenedor-items{
+            display: block;
+        }
+    
+        .Container-descripcio-canchas{
+            display: block;
+        }
+    
+        .proyectosRealizados{
+            display: block;
+        }
     }
-
-    .Container-descripcio-canchas{
-        display: block;
-    }
-
-    .proyectosRealizados{
-        display: block;
-    }
-
 }
 
 @media screen and (min-width:404px){
@@ -358,5 +409,14 @@ body{
     100%{
         opacity: 1;
         transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes movContacto{
+    0%{
+        transform: translatex(0);
+    }
+    100%{
+        transform: translatex(300px);
     }
 }
