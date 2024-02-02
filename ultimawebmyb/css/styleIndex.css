@@ -11,76 +11,6 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
-/* ************  HEADER *************** */
-
-.container-header{
-    height: 100%;
-    display: block;
-    background-size:contain ;
-    background-repeat: no-repeat;
-    text-align: center;
-}
-
-.logos-conacto img{
-   width: 50PX;
-   margin-top: 1%;
-}
-
-#lineContactanos{
-    margin-right: 300px;
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    animation: movContacto 5s linear infinite;
-}
-
-
-/* ******************           NAVBAR          *********************** */
-
-nav{
-    background-color: #000;
-}
-
-.nav-item a{
-    color: #fff;
-}
-
-.nav-item a:hover {
-    border-radius: 5px;
-    background-color: #FFF;
-}
-
-.navbar-logo{
-    padding-left: 22%; 
-}
-
-.navbar-logo :hover{
-    box-shadow: 0 0 30px #666; /* box-shadow genera una sombra en el hover del contenedor items en cada item */
-    scale: 1.05;
-}
-
-.dropdown-menu{
-    background-color: #000;
-}
-#hr-menu-canchas{
-    color: #fff;
-}
-
-/* ************** STILOS FOOTER  */
-.container-footer{
-    
-}
-.contenedor-desc-footer{
-    background-image: linear-gradient(to top, #434343 0%, black 70%);
-    color: #fff;
-}
-.col-iconos img{
-display: block;
-margin-left: 1%;
-float: left;
-}
-
-/* fin style footer */
 
 /* ******************     INICIO CONTAINER      *********************** */
 .inicio-Container{
@@ -99,7 +29,7 @@ float: left;
 
 .inicio-Container p ,h1{
     padding-top: 8%;
-    font-family: 'Playfair Display', serif;
+    font-family:Arial, Helvetica, sans-serif ;
 }
 
 .boton-cotizar {
@@ -111,8 +41,8 @@ float: left;
     padding: 1%;
 }
 
-.boton-cotizar :hover{
-    box-shadow: 0 0 60px #666; /* box-shadow genera una sombra en el hover del contenedor items en cada item */
+.boton-cotizar:hover{
+    box-shadow: 0 5PX 10PX rgba(239, 241, 239, 0.5); /* box-shadow genera una sombra en el hover del contenedor items en cada item */
     scale: 1.05;
 }
 
@@ -152,6 +82,12 @@ float: left;
    border-radius: 10px;
    padding: 20px;
    transition: .3s; /*transition permite que los cambio no se generen instantaneamente si no que se demoren lo especificado en la transition */
+   
+}
+
+.show{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .contenedor-items .item:hover{
@@ -238,7 +174,7 @@ float: left;
     background: linear-gradient(to top, #ecebeb 2%,rgb(0, 0, 0)100%),radial-gradient(at top center, rgba(42, 42, 42, 0.4) 0%, rgba(89, 88, 88, 0.4) 120%) #e2e2e2;
     background-blend-mode: multiply,multiply;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 91%);
-    height: 55rem;
+    height: 60rem;
 }
 .titulo-containers{
     color: #fff;
@@ -278,12 +214,37 @@ float: left;
     padding-top: 30px;
 }
 
-.contenedor-video-containers-baño video{
+/* .contenedor-video-containers-baño video{
     margin-top: 3%;
     width: 100%;
-    height: 18rem;
+    height: 19rem;
     border-radius: 15px;
+} */
+
+.contenedor-video-containers-baño{
+    height:48%;
+    margin-bottom: 5px;
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
 }
+#rowContainer{
+    /* width: 100vh; */
+}
+#rowContainer .col .p-3 img{
+    width: 200px;
+    height: 170px;
+    justify-content: space-between;
+}
+
+#rowContainer .col #imgcont img:hover{
+    box-shadow: 10px 10px rgba(56, 56, 56, 0.2);
+    transform:scale(1.05) ;
+    border-radius: 5px;
+}
+
+
 
 
 /* ****************** ESTILOS DE DESCRIPCION DE CONTAINER EN ARRIENDO O VENTA */
@@ -366,6 +327,11 @@ float: left;
     animation-fill-mode: forwards;
  }
 
+ #carouselContainers{
+    max-height: 350px;
+}
+
+
  /* *************************** REPONSIVIDAD ************************** */
  @media (max-width:768px){
 
@@ -392,6 +358,7 @@ float: left;
         }
     }
 }
+
 
 @media screen and (min-width:404px){
 

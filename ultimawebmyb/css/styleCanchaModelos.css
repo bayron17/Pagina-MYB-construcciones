@@ -4,131 +4,59 @@ body {
     padding: 0;
 }
 
-/* ************  HEADER *************** */
-
-.container-header{
-    height: 100%;
-    display: block;
-    background-size:contain ;
-    background-repeat: no-repeat;
+/* titulo principla */
+.titulo-principal{
     text-align: center;
+    font-family: serif;
+    background: black;
+    color: azure;
+    padding: 15px 5px;
 }
 
-.logos-conacto img{
-   width: 50PX;
-   margin-top: 1%;
+
+/* contenedor canchas */
+#contenedor-modelos{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+    margin-bottom: 10px;
 }
 
-#lineContactanos{
-    margin-right: 300px;
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    animation: movContacto 5s linear infinite;
-}
-/* ******************           NAVBAR          *********************** */
-
-nav{
-    /* border: solid red; */
-    height: 100%;
-    background-color: #000;
+#contenedor-modelos2{
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 51% 94%, 0 88%);
+    margin-bottom: 10px;
+    margin-top: 40PX;
 }
 
-#containernavbar{
-    background-color: black;
-    /* border: solid yellow; */
+#contenedor-modelos3{
+    clip-path: polygon(0 0, 100% 12%, 100% 50%, 100% 100%, 49% 100%, 0 100%);
+    color: white;
+    background-color: rgb(0, 0, 0);
+    margin-top: 40PX;
 }
 
-.nav-item a{
-    color: #fff;
+/* BOTON COTIZAR */
+
+.btoton-cotizar{
+    border: none;
+    border-radius: 5px;
+}
+.btoton-cotizar:hover{
+    box-shadow: 0px 10px 10px rgb(219, 218, 218);  
+    transform: scale(1.05);  
 }
 
-.nav-item a:hover {
-    border-radius: 10px;
-    background-color: #FFF;
+/* imagenes en global para su hover */
+#imagenes:hover{
+    box-shadow: 15px 15px 15px rgb(130, 129, 129,0.5);
+    transform: scale(1.05);
 }
 
-.navbar-logo{
-    padding-left: 22%; 
+/* primera cancha */
+#contenedorfirstcancha{
+    margin-bottom: 80px;
 }
 
-.navbar-logo :hover{
-    box-shadow: 0 0 30px #666; /* box-shadow genera una sombra en el hover del contenedor items en cada item */
-    scale: 1.05;
-}
-
-.dropdown-menu{
-    background-color: #000;
-}
-#hr-menu-canchas{
-    color: #fff;
-}
-
-/* ************** STILOS FOOTER  */
-.container-footer{
-    
-}
-.contenedor-desc-footer{
-    background-image: linear-gradient(to top, #434343 0%, black 70%);
-    color: #fff;
-}
-.col-iconos img{
-display: block;
-margin-left: 1%;
-float: left;
-}
-/* style item */
-.item{
-    height: 200px;
-}
-
-/* item 1 */
-#item1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-size: cover; */
-}
-#item1 img{
-    border: solid green;
-    height: 80%;
-    /* margin-right: 30px; */
-}
- /* *************************** REPONSIVIDAD ************************** */
- /* @media screen and (max-width:450px){
-
-    .container-header{
-        opacity: 0;
-    }
-
-    .card-container{
-        display: block;
-    }
-
-    .card{
-        display: block;
-    }
-
-    .card-front,
-    .card-back {
-        display: block;
-    }
-
-    .card-inner{
-        display: block;
-    }
-
-    .item{
-        display: block;
-    }
-
-    .container-footer{
-        display: block;
-        opacity: 50%;
-    }
-
-} */
-/* animaciones */
 @keyframes movContacto{
     0%{
         transform: translatex(0);
